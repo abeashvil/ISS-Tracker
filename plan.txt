@@ -1,0 +1,19 @@
+For now, lets start with image processing stuff. I have a flat map 
+version of the earth which I can basically split down the middle for 
+positive and negative points.
+
+Then, I need to find a conversion rate for the single pixel size to 
+distance in kilometers. Only then will I be able to map the points to 
+the map. 
+
+Basically, I'm going to draw the path which doesnt change for
+15 days immediately. Then, based on a good time interval (minimum time
+between updated points) I will update the image with the ISS's current
+location. 
+
+Some things to add:
+    -Status of the ISS 
+    -BIO on the current crew
+    -Some statistics on the Solar activity
+Later Features:
+    -Tracking of ALL current space endeavors.
