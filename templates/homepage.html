@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISS Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #map {
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ISS Tracking Website</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Real-time ISS Tracking</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- Include Leaflet library and set up the map -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Replace this with your ISS tracking API endpoint
+        // const ISS_API_ENDPOINT = 'https://api.example.com/iss/location';
+
+        // Initialize the map
+        const map = L.map('map').setView([0, 0], 2);
+
+        // Add OpenStreetMap as a tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // // Fetch ISS location and update the marker
+        // function updateISSLocation() {
+        //     fetch(ISS_API_ENDPOINT)
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             const { latitude, longitude } = data;
+        //             map.setView([latitude, longitude], 2);
+
+        //             // Add or update the ISS marker
+        //             if (!map.hasLayer(issMarker)) {
+        //                 issMarker = L.marker([latitude, longitude]).addTo(map);
+        //             } else {
+        //                 issMarker.setLatLng([latitude, longitude]);
+        //             }
+        //         })
+        //         .catch(error => console.error('Error fetching ISS location:', error));
+        // }
+
+        // // Initial call to update ISS location
+        // updateISSLocation();
+
+        // // Update ISS location every 10 seconds
+        // setInterval(updateISSLocation, 10000);
+    </script>
+
+</body>
+
+</html>
+
