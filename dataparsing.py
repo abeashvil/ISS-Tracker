@@ -28,5 +28,5 @@ def main():
     with open("paths/data.json", "w") as file:
         json.dump(large_data, file, indent=4)
         file.write("")
-                        
+
 main()
